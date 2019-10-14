@@ -1,0 +1,9 @@
+1) controllo presenza del file rubrica.xml
+2) apertura del file
+3) presentazione a video o con gui del menu di gestione
+4) possibilità di stampare tutta la rubrica
+5) possibilità di stampare un elemento della rubrica per id o per cognome/nome
+6) inserimento nuovo elemento in rubrica
+7) cancellazione
+nb per elemento si intende un soggetto completo di tutti i suoi campi
+8) creazione rubrica vuota

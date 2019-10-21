@@ -1,9 +1,17 @@
-1) controllo presenza del file rubrica.xml
-2) apertura del file
-3) presentazione a video o con gui del menu di gestione
-4) possibilità di stampare tutta la rubrica
-5) possibilità di stampare un elemento della rubrica per id o per cognome/nome
-6) inserimento nuovo elemento in rubrica
-7) cancellazione
-nb per elemento si intende un soggetto completo di tutti i suoi campi
-8) creazione rubrica vuota
+1) Controllo della presenza del file rubrica.xml
+2) Apertura del file
+3) Presentazione a video o con GUI del menu di gestione
+4) Possibilità di stampare tutta la rubrica
+5) Possibilità di stampare un elemento della rubrica 
+	per ID o per Cognome/Nome (in caso di omonimia stamparli entrambi)
+6) Inserimento nuova elemento in rubrica
+7) Cancellazione elemento in rubrica
+8) Creazione di una nuova rubrica vuota
+
+N.B. Per elemento si intende un soggetto completo di tutti i suoi campi
+(cognome, nome, email, telefono, ecc.)
+
+Link di riferimento:
+
+Write: https://examples.javacodegeeks.com/core-java/xml/parsers/documentbuilderfactory/create-xml-file-in-java-using-dom-parser-example/
+Read: https://howtodoinjava.com/xml/read-xml-dom-parser-example/

@@ -26,9 +26,50 @@ public class FatturaXML {
     
     public static void main(String argv[]) throws InterruptedException {
  
+        funzioni controllo = new  funzioni();
+        int esiste=controllo.controlloEsistenza();
+        
+        if (esiste==1){
+            int finito=0;
+            int scelta=3;
+            fileEsistenteAvviso avviso = new fileEsistenteAvviso();
+            avviso.setVisible(true);
+                do{        
+                    do{
+                    scelta=avviso.scelta();            
+            }while(scelta==3);
+        
+            finito=1;        
+            }while(finito==0);
+            System.out.println(finito);
+            
+            if (finito==1){
+            avviso.setVisible(false);
+        }
+        }
+
+        
         gestioneFatture fatturaNuova = new  gestioneFatture();
-        fatturaNuova.gestioneFatture();
-       
+            int finito=0;
+            int scelta=3;
+            Avviso dialogo = new Avviso();
+            dialogo.setVisible(true);
+            do{        
+            do{
+            scelta=dialogo.scelta();            
+            }while(scelta==3);
+        
+            finito=1;        
+            }while(finito==0);
+            System.out.println(finito);
+        
+            if (finito==1){
+            dialogo.setVisible(false);
+            }
+        
+        
+            fatturaNuova.gestioneFatture();
+
         
     }
         

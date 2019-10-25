@@ -9,7 +9,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
+import static fatturaxml.FatturaXML.xmlFilePath;
+import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 import javax.xml.*;
 import javax.xml.parsers.DocumentBuilder;
@@ -32,7 +35,7 @@ import java.util.concurrent.TimeUnit;
 public class gestioneFatture {
 
     
-    public void gestioneFatture() throws InterruptedException {
+    public void gestioneFatture() throws InterruptedException, IOException {
  
         System.out.println("Benvenuto");
         int continua=0;
@@ -82,20 +85,25 @@ public class gestioneFatture {
             case 1:
             CreazioneFattura fattura = new CreazioneFattura();
             fattura.creazioneNuovaFatturaXML(); 
+            apriFile();
             break;
             case 2:
             continua=1;
             menu2.setVisible(false);
+            apriFile();
             break; 
             case 3:
             eliminaFattura fatturaNuova = new eliminaFattura();
             fatturaNuova.modificaFattura();
+            apriFile();
             break; 
             case 0:
             modificaFattura nuovaFattura =new modificaFattura();
             nuovaFattura.modificaFattura();
+            apriFile();
             
         }
+
         
         if (continua==0) {
         Continua scegli = new Continua();
@@ -113,6 +121,16 @@ public class gestioneFatture {
         }
         }
     }
+    public void apriFile(){
+            File file = new File(xmlFilePath);
+
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            desktop.open(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        }
         
         
     

@@ -1,6 +1,8 @@
 package fatturaxml;
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
+import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 import javax.xml.*;
 import javax.xml.parsers.DocumentBuilder;
@@ -24,10 +26,11 @@ public class FatturaXML {
 
     public static final String xmlFilePath = "fattura.xml";
     
-    public static void main(String argv[]) throws InterruptedException {
+    public static void main(String argv[]) throws InterruptedException, IOException {
  
         funzioni controllo = new  funzioni();
         int esiste=controllo.controlloEsistenza();
+        
         
         if (esiste==1){
             int finito=0;
@@ -45,6 +48,14 @@ public class FatturaXML {
             
             if (finito==1){
             avviso.setVisible(false);
+            File file = new File(xmlFilePath);
+
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            desktop.open(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         }
         }
 

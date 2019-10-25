@@ -32,6 +32,7 @@ import org.w3c.dom.UserDataHandler;
  */
 public class CreazioneFattura {
     Scanner s = new Scanner(System. in);
+    String xml;
     // persona
         public int creazioneNuovaFatturaXML() throws InterruptedException{
             
@@ -395,7 +396,7 @@ public class CreazioneFattura {
             // ciclo for per le persone
             for(int i=0;i<numeroPersone;i++){
             
-            persona[i] = document.createElement(nomi[i]);
+            persona[i] = document.createElement("persona");
             rubrica.appendChild(persona[i]); 
  
             Element nome = document.createElement("nome");

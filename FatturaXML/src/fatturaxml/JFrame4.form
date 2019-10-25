@@ -74,7 +74,7 @@
                           <Component id="jButton1" min="-2" pref="350" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -131,7 +131,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Inserisci il nome della persona che vuoi modificare"/>
+            <Property name="text" type="java.lang.String" value="Inserisci l&apos;elemento della persona che vuoi modificare"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
